@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -9,14 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <nav className="bg-red-300 px-6 py-4">
-          <h6>Logo</h6>
-          <ul>
-            <li>About</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
+        <Navbar />
         <div className="h-screen">{children}</div>
       </body>
     </html>
