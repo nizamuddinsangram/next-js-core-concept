@@ -15,6 +15,10 @@ const Navbar = () => {
       title: "services",
       path: "/services",
     },
+    {
+      title: "Blogs",
+      path: "/blogs",
+    },
   ];
   return (
     <nav className="bg-red-300 px-6 py-4 flex justify-between items-center ">

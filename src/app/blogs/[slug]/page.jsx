@@ -1,17 +1,11 @@
-import Link from "next/link";
-
-const BlogPage = () => {
+const page = ({ params }) => {
+  console.log(params.slug);
+  const { slug, title, description } = blogs.find(
+    (blog) => blog.slug === params.slug
+  );
   return (
-    <div className="p-4">
-      {blogs.map((blog) => (
-        <div className="border-2 p-12 " key={blog.slug}>
-          <h3>{blog.title}</h3>
-          <h3>{blog.description}</h3>
-          <button className="bg-teal-500 px-2 rounded-md py-2 mt-2 text-gray-200">
-            <Link href={`/blogs/${blog.slug}`}> View Details</Link>
-          </button>
-        </div>
-      ))}
+    <div>
+      <h5>{title}</h5>
     </div>
   );
 };
@@ -47,5 +41,4 @@ const blogs = [
       "An introduction to Tailwind CSS, explaining its utility-first approach to styling and how to get started with it.",
   },
 ];
-
-export default BlogPage;
+export default page;
